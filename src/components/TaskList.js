@@ -3,6 +3,7 @@ import { fetchTasks, deleteTask, fetchEmployees } from '../redux/actions';
 import TaskForm from './TaskForm';
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import '../styles/TaskList.css';
 
 const TaskList = () => {
   const dispatch = useDispatch();
@@ -26,18 +27,23 @@ const TaskList = () => {
 
   
 return (
-  <div>
+  <div className = "tl">
     <TaskForm />
     {tasksWithEmployeeNames.length ? (
       tasksWithEmployeeNames.map((task) => (
-        <div key={task.id}>
-          <NavLink to={`/tasks/${task.id}`}>
-            <h2>{task.description}</h2>
-          </NavLink>
-          <p>Priority: {task.priorityLevel}</p>
+        <div key={task.id} className='taskSpace'>
+          <h2 className = "header2"> 
+            <NavLink to={`/tasks/${task.id}`}>{task.description}</NavLink>
+          </h2>
+          <p>
+            Priority: 
+            <span className={`priority-${task.priorityLevel.toLowerCase()}`}>
+              {' '}{task.priorityLevel}
+            </span>
+          </p>
           <p>Assigned by: {task.employeeName}</p>
           <p>Status: {task.completionStatus ? 'Completed' : 'Not Completed'}</p>
-          <button onClick={() => dispatch(deleteTask(task.id))}>
+          <button className = "delete-button" onClick={() => dispatch(deleteTask(task.id))}>
             Delete
           </button>
         </div>

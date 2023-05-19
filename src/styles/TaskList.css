@@ -1,10 +1,6 @@
-.el {
+.tl {
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-image: url("../images/white.jpg");
-    background-repeat: repeat;
-    background-size: cover;
-    
   }
 
   .delete-button {
@@ -19,16 +15,25 @@
   .delete-button:hover {
     background-color: red;
   }
-  .taskSpace {
-    margin-bottom: 40px;
-    border-bottom: 2px solid black;
-    padding-bottom: 20px;
-  }
   .header2 {
     color: #333;
     margin-top: 40px;
   }
 
-  .header2 a:visited{
-    color: inherit;
-}
+  .taskSpace {
+    margin-bottom: 40px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+  }
+
+  .priority-low {
+    color: green;
+  }
+  
+  .priority-medium {
+    color: orange;
+  }
+  
+  .priority-high {
+    color: red;
+  }

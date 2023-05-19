@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../redux/actions';
+import '../styles/Form.css';
 
 const TaskForm = () => {
   const [description, setDescription] = useState('');
@@ -24,7 +25,7 @@ const TaskForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className='formSpace'>
         Description:
         <input
           type="text"
@@ -33,7 +34,7 @@ const TaskForm = () => {
         />
       </label>
 
-      <label>
+      <label className='formSpace'>
         Priority Level:
         <select value={priorityLevel} onChange={(e) => setPriorityLevel(e.target.value)}>
           <option value="">Select priority</option>
@@ -43,7 +44,7 @@ const TaskForm = () => {
         </select>
       </label>
 
-      <input type="submit" value="Add Task" />
+      <input type="submit" value="Add Task" className='add-button'/>
     </form>
   );
 };

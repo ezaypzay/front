@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { fetchEmployees, deleteEmployee } from '../redux/actions';
 import EmployeeForm from './EmployeeForm';
+import '../styles/EmployeeList.css';
 
 const EmployeeList = () => {
   const dispatch = useDispatch();
@@ -15,16 +16,14 @@ const EmployeeList = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className = "el">
       <EmployeeForm />
       {employees.length ? (
         employees.map((employee) => (
-          <div key={employee.id}>
-            <NavLink to={`/employees/${employee.id}`}>
-              <h2>{employee.firstName} {employee.lastName}</h2>
-            </NavLink>
+          <div key={employee.id} className = "taskSpace">
+            <h2 className='header2'><NavLink to={`/employees/${employee.id}`}>{employee.firstName} {employee.lastName}</NavLink></h2>
             <p>{employee.department}</p>
-            <button onClick={() => dispatch(deleteEmployee(employee.id))}>
+            <button className = "delete-button" onClick={() => dispatch(deleteEmployee(employee.id))}>
               Delete
             </button>
           </div>

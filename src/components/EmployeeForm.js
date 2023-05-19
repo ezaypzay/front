@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../redux/actions';
+import '../styles/Form.css';
 
 const EmployeeForm = () => {
   const [firstName, setFirstName] = useState('');
@@ -27,7 +28,7 @@ const EmployeeForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className='formSpace'>
         First Name:
         <input
           type="text"
@@ -35,7 +36,7 @@ const EmployeeForm = () => {
           onChange={(e) => setFirstName(e.target.value)}
         />
       </label>
-      <label>
+      <label className='formSpace'>
         Last Name:
         <input
           type="text"
@@ -43,7 +44,7 @@ const EmployeeForm = () => {
           onChange={(e) => setLastName(e.target.value)}
         />
       </label>
-      <label>
+      <label className='formSpace'>
         Department:
         <input
           type="text"
@@ -51,7 +52,7 @@ const EmployeeForm = () => {
           onChange={(e) => setDepartment(e.target.value)}
         />
       </label>
-      <button type="submit">Add Employee</button>
+      <button type="submit" className='add-button'>Add Employee</button>
     </form>
   );
 };

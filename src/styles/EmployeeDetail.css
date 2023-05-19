@@ -1,0 +1,42 @@
+.ed {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.taskSpace {
+  margin-bottom: 40px;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+}
+
+.header {
+  color: #333;
+  margin-top: 40px;
+}
+
+.header2 {
+    color: #333;
+    margin-top: 80px;
+  }
+
+.assign-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.assign-button:hover {
+    background-color: #0056b3;
+  }
+
+.taskBubble {
+    padding: 10px 20px;
+    background-color: #f5f5f5; 
+    border-radius: 5px;
+    margin-bottom: 10px; 
+  }

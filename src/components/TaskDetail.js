@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchTaskById, fetchEmployeeById, updateTaskStatus, updateTask } from '../redux/actions';
+import '../styles/TaskDetail.css';
 
 const TaskDetail = () => {
   const { id } = useParams();
@@ -46,7 +47,7 @@ const TaskDetail = () => {
 };
 
   return task ? (
-    <div>
+    <div className = "td">
       <h2>Description: {task.description}</h2>
       <p>Priority Level: 
   <select value={task ? task.priorityLevel : ''} onChange={handlePriorityChange}>
