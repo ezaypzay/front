@@ -1,7 +1,8 @@
-.tl {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
+body {
+  background-image: url("../images/bg4.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
 
   .delete-button {
     margin-top: 10px;

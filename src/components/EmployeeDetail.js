@@ -27,7 +27,7 @@ const EmployeeDetail = () => {
   };
 
   return (
-    <div className = "ed">
+    <div>
       {employee ? (
         <>
           <h2>{employee.firstName} {employee.lastName}</h2>

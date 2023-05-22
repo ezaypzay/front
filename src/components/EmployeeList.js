@@ -16,7 +16,7 @@ const EmployeeList = () => {
   }, [dispatch]);
 
   return (
-    <div className = "el">
+    <div>
       <EmployeeForm />
       {employees.length ? (
         employees.map((employee) => (

@@ -47,7 +47,7 @@ const TaskDetail = () => {
 };
 
   return task ? (
-    <div className = "td">
+    <div>
       <h2>Description: {task.description}</h2>
       <p>Priority Level: 
   <select value={task ? task.priorityLevel : ''} onChange={handlePriorityChange}>

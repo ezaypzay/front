@@ -27,7 +27,7 @@ const TaskList = () => {
 
   
 return (
-  <div className = "tl">
+  <div>
     <TaskForm />
     {tasksWithEmployeeNames.length ? (
       tasksWithEmployeeNames.map((task) => (
