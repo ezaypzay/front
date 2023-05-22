@@ -1,8 +1,8 @@
-import { employeeReducer, taskReducer } from './reducer';
+import { employeeReducer, taskReducer } from "./reducer";
 
 const rootReducer = {
   employees: employeeReducer,
-  tasks: taskReducer
+  tasks: taskReducer,
 };
 
 export default rootReducer;

@@ -1,40 +1,40 @@
 body {
   background-image: url("../images/bg4.jpg");
-    background-repeat: repeat;
-    background-size: cover;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
-  .delete-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-  }
-  .delete-button:hover {
-    background-color: red;
-  }
-  .header2 {
-    color: #333;
-    margin-top: 40px;
-  }
+.delete-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background-color: red;
+}
+.header2 {
+  color: #333;
+  margin-top: 40px;
+}
 
-  .taskSpace {
-    margin-bottom: 40px;
-    border-bottom: 2px solid black;
-    padding-bottom: 20px;
-  }
+.taskSpace {
+  margin-bottom: 40px;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+}
 
-  .priority-low {
-    color: green;
-  }
-  
-  .priority-medium {
-    color: orange;
-  }
-  
-  .priority-high {
-    color: red;
-  }
+.priority-low {
+  color: green;
+}
+
+.priority-medium {
+  color: orange;
+}
+
+.priority-high {
+  color: red;
+}

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addTask } from '../redux/actions';
-import '../styles/Form.css';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTask } from "../redux/actions";
+import "../styles/Form.css";
 
 const TaskForm = () => {
-  const [description, setDescription] = useState('');
-  const [priorityLevel, setPriorityLevel] = useState('');
+  const [description, setDescription] = useState("");
+  const [priorityLevel, setPriorityLevel] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -19,13 +19,13 @@ const TaskForm = () => {
 
     dispatch(addTask(newTask));
 
-    setDescription('');
-    setPriorityLevel('');
+    setDescription("");
+    setPriorityLevel("");
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label className='formSpace'>
+      <label className="formSpace">
         Description:
         <input
           type="text"
@@ -34,9 +34,12 @@ const TaskForm = () => {
         />
       </label>
 
-      <label className='formSpace'>
+      <label className="formSpace">
         Priority Level:
-        <select value={priorityLevel} onChange={(e) => setPriorityLevel(e.target.value)}>
+        <select
+          value={priorityLevel}
+          onChange={(e) => setPriorityLevel(e.target.value)}
+        >
           <option value="">Select priority</option>
           <option value="Low">Low</option>
           <option value="Medium">Medium</option>
@@ -44,7 +47,7 @@ const TaskForm = () => {
         </select>
       </label>
 
-      <input type="submit" value="Add Task" className='add-button'/>
+      <input type="submit" value="Add Task" className="add-button" />
     </form>
   );
 };
