@@ -7,7 +7,6 @@ import {
   updateTaskStatus,
   updateTask,
 } from "../redux/actions";
-import "../styles/TaskDetail.css";
 
 const TaskDetail = () => {
   const { id } = useParams();
